@@ -1,7 +1,45 @@
 import edu.princeton.cs.algs4.BST;
 
-public class BSTInventoryIndex {
+//hacer que los metodos sean del BST original de princeton
+public class BSTInventoryIndex implements InventoryIndex {
     private BST<Integer, InventoryItem> st;
 
-    //hacer que los metodos sean del BST original de princeton
+    public BSTInventoryIndex() {
+        this.st = new BST<>();
+    }
+
+    @Override
+    public void put(Integer key, InventoryItem val) {
+        st.put(key, val);
+    }
+
+    @Override
+    public InventoryItem get(Integer key) {
+        return st.get(key);
+    }
+
+    @Override
+    public void delete(Integer key) {
+        st.delete(key);
+    }
+
+    @Override
+    public boolean contains(Integer key) {
+        return st.contains(key);
+    }
+
+    @Override
+    public Iterable<Integer> keys() {
+        return st.keys();
+    }
+
+    @Override
+    public int size() {
+        return st.size();
+    }
+
+    @Override
+    public int height() {
+        return st.height();
+    }
 }
