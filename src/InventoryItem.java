@@ -26,7 +26,7 @@ public class InventoryItem {
 
     //NO STOCK NEGATIVO, NO PRESTAR MAS DE LO DISPONIBLE, NO DEVOLVER MAS DE LO PRESTADO (osea, OnLoan < Total)
     public void addStock (int itemId, int quantity) { //aumentar total y available
-        if(id == itemId && quantity > 0) { //pequeño if para darle un uso al ID, ya que no es necesario "identificar"
+        if(id == itemId && quantity > 0) {
             stockTotal += quantity;
             stockAvailable += quantity;
         }
